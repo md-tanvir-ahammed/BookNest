@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>BookNest - User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="logo">BookNest</h2>
+        <div class="nav-right">
+            <a href="home.html" class="nav-link">🏠 Home</a>
+            <a href="profile.html" class="nav-link active">👤 Profile</a>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <!-- User Info Header Card -->
+        <div class="user-card">
+            <div class="user-avatar">👤</div>
+            <div class="user-details">
+                <h1 id="profile-name">User Name</h1>
+                <p id="profile-email">user@example.com</p>
+                <span class="member-badge">BookNest Member</span>
+            </div>
+        </div>
+
+        <!-- Statistics Overview Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value" id="stat-uploaded">0</div>
+                <div class="stat-label">Books Uploaded</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-comments">0</div>
+                <div class="stat-label">Comments Posted</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-favorites">0</div>
+                <div class="stat-label">Favorite Books</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="stat-reading">0</div>
+                <div class="stat-label">Books in Progress</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Content Grid -->
+        <div class="dashboard-grid">
+            <!-- Recently Read Section -->
+            <div class="dashboard-card">
+                <h2>📖 Recently Read</h2>
+                <div class="item-list" id="recently-read-list">
+                    <p class="empty-msg">No recently read books found.</p>
+                </div>
+            </div>
+
+            <!-- Reading Progress Section -->
+            <div class="dashboard-card">
+                <h2>📊 Reading Progress</h2>
+                <div class="item-list" id="progress-list">
+                    <p class="empty-msg">No reading progress recorded yet.</p>
+                </div>
+            </div>
+
+            <!-- Favorites Section -->
+            <div class="dashboard-card full-width">
+                <h2>❤️ My Favorites</h2>
+                <div class="favorites-grid" id="favorites-list">
+                    <p class="empty-msg">You haven't added any favorites yet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
