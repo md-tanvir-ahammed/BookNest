@@ -38,7 +38,7 @@ University students and local reading communities who want a fast, no-clutter wa
 | Auth | bcrypt (password hashing) + JSON Web Tokens (sessions) |
 | File Storage | PDF files stored on server disk, referenced by path in DB |
 | Version Control | Git & GitHub |
-| Deployment | Render.com (or Railway/Vercel, see §6) |
+| Deployment | Render.com |
 
 ### 1.5 What changed from Version 2 → Version 3
 
