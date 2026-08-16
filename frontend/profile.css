@@ -1,0 +1,213 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.navbar .logo { color: #e2b96f; font-size: 22px; letter-spacing: 1px; }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+.nav-link:hover { background: rgba(255, 255, 255, 0.1); color: #fff; }
+.nav-link.active {
+    background: rgba(226, 185, 111, 0.15);
+    color: #e2b96f;
+    border: 1px solid rgba(226, 185, 111, 0.3);
+}
+
+.logout-btn {
+    padding: 8px 18px;
+    border: none; border-radius: 10px;
+    font-weight: 700; cursor: pointer;
+    background: linear-gradient(135deg, #e2b96f, #c9982f); color: #1a1a2e;
+}
+
+.profile-container {
+    max-width: 1000px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* User Card */
+.user-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.user-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e2b96f, #c9982f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #1a1a2e;
+}
+.user-details h1 { color: #e2b96f; font-size: 26px; margin-bottom: 4px; }
+.user-details p { color: rgba(255, 255, 255, 0.6); font-size: 14px; margin-bottom: 8px; }
+.member-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(226, 185, 111, 0.15);
+    border: 1px solid rgba(226, 185, 111, 0.3);
+    color: #e2b96f;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* Stats Overview Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+}
+.stat-value {
+    font-size: 30px;
+    font-weight: 800;
+    color: #e2b96f;
+    margin-bottom: 4px;
+}
+.stat-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Dashboard Sections */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 24px;
+}
+.dashboard-card.full-width {
+    grid-column: 1 / -1;
+}
+.dashboard-card h2 {
+    color: #e2b96f;
+    font-size: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.empty-msg {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    font-style: italic;
+    padding: 12px 0;
+}
+
+.list-item {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.list-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-item-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #fff;
+}
+.list-item-subtitle {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Progress bar inside list item */
+.item-progress-wrap {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+.item-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #e2b96f, #c9982f);
+    border-radius: 3px;
+}
+
+/* Favorites Grid */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+}
+.fav-card {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.fav-card-icon {
+    font-size: 24px;
+}
+.fav-card-info h4 {
+    font-size: 14px;
+    color: #e2b96f;
+    margin-bottom: 2px;
+}
+.fav-card-info p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .user-card { flex-direction: column; text-align: center; }
+}

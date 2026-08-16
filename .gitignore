@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+
+# Uploaded PDFs (user content, not source code)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# OS/editor files
+.DS_Store
+*.log
